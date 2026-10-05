@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Ingrese un numero del 1 al 10: ");
+    scanf("%d", &n);
+
+    if (n < 1 || n > 10) {
+        printf("El numero ingresado esta fuera del rango 1 a 10.\n");
+    } else if (n < 5) {
+        printf("El numero %d es menor a 5.\n", n);
+    } else if (n > 5) {
+        printf("El numero %d es mayor a 5.\n", n);
+    } else {
+        printf("El numero es igual a 5.\n");
+    }
+
+    return 0;
+}
