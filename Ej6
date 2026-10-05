@@ -1,0 +1,38 @@
+#include <stdio.h>
+ 
+int main() {
+    int num, opcion, cantidad;
+ 
+    printf("Ingrese un numero: ");
+    scanf("%d", &num);
+ 
+    do {
+        printf("\nNumero actual: %d\n", num);
+        printf("1) Sumar decenas\n");
+        printf("2) Restar decenas\n");
+        printf("3) Terminar y mostrar valor final\n");
+        printf("Elija una opcion: ");
+        scanf("%d", &opcion);
+ 
+        switch (opcion) {
+            case 1:
+                printf("Cuantas decenas quiere sumar?: ");
+                scanf("%d", &cantidad);
+                num = num + cantidad * 10;
+                break;
+            case 2:
+                printf("Cuantas decenas quiere restar?: ");
+                scanf("%d", &cantidad);
+                num = num - cantidad * 10;
+                break;
+            case 3:
+                printf("\nEl valor final del numero es: %d\n", num);
+                break;
+            default:
+                printf("Opcion invalida.\n");
+                break;
+        }
+    } while (opcion != 3);
+ 
+    return 0;
+}
