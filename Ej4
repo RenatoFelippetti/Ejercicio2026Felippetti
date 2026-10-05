@@ -1,0 +1,50 @@
+#include <stdio.h>
+ 
+int main() {
+    int num, original, resta;
+ 
+    printf("Ingrese un valor para num: ");
+    scanf("%d", &num);
+    original = num;
+ 
+    printf("Ingrese el valor a restar en cada vuelta (mayor a 0): ");
+    scanf("%d", &resta);
+ 
+    if (resta <= 0) {
+        printf("El valor a restar debe ser mayor a 0.\n");
+        return 1;
+    }
+
+    printf("\nWHILE restando de 1 en 1:\n");
+    num = original;
+    while (num > 0) {
+        num = num - 1;
+        printf("%d\n", num);
+    }
+
+    printf("\nWHILE restando %d en cada vuelta:\n", resta);
+    num = original;
+    while (num > 0) {
+        num = num - resta;
+        if (num < 0) {
+            num = 0; // no pasamos de 0
+        }
+        printf("%d\n", num);
+    }
+
+    printf("\nFOR restando de 1 en 1:\n");
+    for (num = original; num > 0; num--) {
+        printf("%d\n", num - 1);
+    }
+
+    printf("\nFOR restando %d en cada vuelta:\n", resta);
+    for (num = original; num > 0; ) {
+        num = num - resta;
+        if (num < 0) {
+            num = 0; // no pasamos de 0
+        }
+        printf("%d\n", num);
+    }
+ 
+    return 0;
+}
