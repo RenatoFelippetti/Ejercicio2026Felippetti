@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Ingrese la primera variable: ");
+    scanf("%d", &a);
+    printf("Ingrese la segunda variable: ");
+    scanf("%d", &b);
+
+    if (a > b) {
+        printf("La variable menor es %d (b).\n", b);
+        printf("Le faltan %d para igualar y %d para superar a la mayor.\n", a - b, a - b + 1);
+    } else if (b > a) {
+        printf("La variable menor es %d (a).\n", a);
+        printf("Le faltan %d para igualar y %d para superar a la mayor.\n", b - a, b - a + 1);
+    } else {
+        printf("Las dos variables son iguales, no hay diferencia.\n");
+    }
+
+    return 0;
+}
