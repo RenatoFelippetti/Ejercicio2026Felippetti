@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c, suma;
+
+    printf("Ingrese la primera variable: ");
+    scanf("%d", &a);
+    printf("Ingrese la segunda variable: ");
+    scanf("%d", &b);
+    printf("Ingrese la tercera variable: ");
+    scanf("%d", &c);
+
+    suma = a + b + c;
+    printf("La suma es: %d\n", suma);
+
+    suma = suma - a;
+    printf("La suma menos la primera variable es: %d\n", suma);
+
+    if (a >= b && a >= c) {
+        printf("La variable más alta es %d\n", a);
+    } else if (b >= a && b >= c) {
+        printf("La variable más alta es %d\n", b);
+    } else {
+        printf("La variable más alta es %d\n", c);
+    }
+
+    return 0;
+}
