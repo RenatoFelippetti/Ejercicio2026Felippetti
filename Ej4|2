@@ -1,0 +1,18 @@
+#include <stdio.h>
+ 
+int main() {
+    int terminos, i;
+ 
+    printf("Cuantos terminos quiere mostrar?: ");
+    scanf("%d", &terminos);
+ 
+    for (i = 1; i <= terminos; i++) {
+        printf("%d", i * 5);
+        if (i < terminos) {
+            printf(", ");
+        }
+    }
+    printf("\n");
+ 
+    return 0;
+}
