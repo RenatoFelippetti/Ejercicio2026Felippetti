@@ -1,0 +1,15 @@
+#include <stdio.h>
+ 
+#define ANIO_ACTUAL 2026
+ 
+int main() {
+    int fecha;
+ 
+    printf("Por favor introduzca el año en que nació: ");
+    scanf("%d", &fecha);
+ 
+    printf("Si usted nació en este año cumple %d años\n", ANIO_ACTUAL - fecha);
+ 
+    return 0;
+}
+ 
