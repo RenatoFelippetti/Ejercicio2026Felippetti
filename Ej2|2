@@ -1,0 +1,18 @@
+#include <stdio.h>
+ 
+int main() {
+    float altura, base, area;
+ 
+    printf("Ingrese la altura: ");
+    scanf("%f", &altura);
+    printf("Ingrese la base: ");
+    scanf("%f", &base);
+ 
+    area = (base * altura) / 2;
+ 
+    printf("Un triángulo rectángulo de altura %.2f y base %.2f, tiene un área de %.2f\n",
+           altura, base, area);
+ 
+    return 0;
+}
+ 
