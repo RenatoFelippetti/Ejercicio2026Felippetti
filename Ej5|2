@@ -1,0 +1,32 @@
+#include <stdio.h>
+ 
+#define SECRETO 42   // numero a adivinar (entre 1 y 100)
+ 
+int main() {
+    int intento;
+    int intentos = 0;
+ 
+    do {
+        printf("Adivine el numero (1 a 100): ");
+        scanf("%d", &intento);
+        intentos++;
+ 
+        if (intento > SECRETO) {
+            printf("El numero ingresado es mayor que el numero secreto.\n");
+        } else if (intento < SECRETO) {
+            printf("El numero ingresado es menor que el numero secreto.\n");
+        }
+    } while (intento != SECRETO);
+ 
+    printf("Adivinó el numero en %d intentos.\n", intentos);
+ 
+    if (intentos < 5) {
+        printf("¡GENIO!\n");
+    } else if (intentos <= 10) {
+        printf("Bastante bien\n");
+    } else {
+        printf("Te falta práctica...\n");
+    }
+ 
+    return 0;
+}
